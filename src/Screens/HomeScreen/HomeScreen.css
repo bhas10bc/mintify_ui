@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+.parentCont {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.sidebar {
+  width: 18%;
+  height: 100vh;
+  background-color: #171717;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 20px;
+  color: #fff;
+}
+.mainbar {
+  width: 82%;
+  height: 100vh;
+}
+.disableBTN {
+  background-color: #93d8f8;
+
+  height: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 35%;
+}
+.logoSec {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  font-size: 15px;
+  padding-left: 20px;
+}
+.menuBar {
+  height: 100%;
+  width: 100%;
+  margin-top: 10%;
+}
+.menuItem {
+  padding-left: 20px;
+  cursor: pointer;
+}
+.menuItemText {
+  color: #03a9f4;
+}
+.selectedItemStyle {
+  border-left: 2px solid #03a9f4;
+  padding-left: 18px;
+}
+.topMainSec {
+  height: 13vh;
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.leftmainSec,
+.rightmainSec {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+.leftmainSec {
+  padding-left: 20px;
+  gap: 5px;
+}
+.rightmainSec {
+  justify-content: flex-end;
+  gap: 5%;
+  align-items: center;
+  padding-right: 5%;
+}
+.connectWalletBTn {
+  background: linear-gradient(92.29deg, #03a9f4 0%, #6fd2ff 100%);
+  height: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.cursorProp {
+  cursor: pointer;
+}
+
+.mpinInputStyle {
+  background-color: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  border-radius: 7px;
+  height: 40px;
+  padding-left: 7px;
+  width: 80%;
+}
+.mpinInputStyle:focus {
+  outline: none;
+}
+.bottomMainSec {
+  display: flex;
+  flex-direction: row;
+  padding: 4%;
+  padding-bottom: 1%;
+}
+.bottomLeftSec,
+.bottomRightSec {
+  width: 50%;
+}
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 100%;
+}
+.inputboxStyle {
+  background-color: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  height: 35px;
+  width: 80%;
+  border-radius: 5px;
+  padding-left: 1px;
+  font-size: 13px;
+}
+.inputboxStyle::placeholder {
+  color: #b0b0b0;
+}
+.inputboxStyle:focus {
+  outline: none;
+}
+.textarea {
+  height: 90px;
+  resize: none;
+}
+.createTokBtn {
+  width: 35%;
+  background: linear-gradient(92.29deg, #03a9f4 0%, #6fd2ff 100%);
+  height: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.inputCont {
+  width: 70%;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-left: 15%;
+  border: 1px solid #e8e8e8;
+}
+
+@media only screen and (min-width: 1281px) {
+  .topMainSec {
+    font-size: 22px;
+  }
+  .connectWalletBTn {
+    height: 50px;
+  }
+  .logoSec {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  .menuItem {
+    font-size: 20px;
+  }
+}
