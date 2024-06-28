@@ -8,7 +8,7 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from "react-router-dom";
-import * as StellarSdk from "@stellar/stellar-sdk";
+import * as DiamSdk from "diamante-sdk-js";
 import axios from "axios";
 import { ClipLoader } from "react-spinners";
 import tokenBg from "../../Assets/tokenBg.png";
@@ -155,7 +155,7 @@ const HomeScreen = () => {
 
   // function getKeyPairFromPrivateKey(privateKey) {
   //   try {
-  //     // const kp = StellarSdk.Keypair.fromSecret(privateKey);
+  //     // const kp = DiamSdk.Keypair.fromSecret(privateKey);
   //     // const publicKey = kp.publicKey();
   //     // console.log("PUBLIC", publicKey);
   //     // // return { publicKey, privateKey };
@@ -171,7 +171,7 @@ const HomeScreen = () => {
 
   const getKeyPairFromPrivateKey = async (privateKey) => {
     setLoader(true);
-    const kp = StellarSdk.Keypair.fromSecret(privateKey);
+    const kp = DiamSdk.Keypair.fromSecret(privateKey);
     // const publicKey = kp.publicKey();
     let requestBody = {
       publicKey: kp.publicKey(), // pblKeyVal,
@@ -199,7 +199,7 @@ const HomeScreen = () => {
   };
 
   const getManageToken = async (privateKey) => {
-    const kp = StellarSdk.Keypair.fromSecret(privateKey);
+    const kp = DiamSdk.Keypair.fromSecret(privateKey);
     const publicK = kp.publicKey();
     await axios
       .get(URI.getAssets + "/" + publicK)

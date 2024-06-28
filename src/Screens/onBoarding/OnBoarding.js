@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { decrypt, encrypt } from "../../Common/CommonComp";
 import { useNavigate } from "react-router-dom";
-import * as StellarSdk from "@stellar/stellar-sdk";
+import * as DiamSdk from "diamante-sdk-js";
 
 const OnBoarding = () => {
   const [viewMode, setViewMode] = useState("welcomeSec");
@@ -190,7 +190,7 @@ const OnBoarding = () => {
 
   function getKeyPairFromPrivateKey(privateKey) {
     try {
-      const kp = StellarSdk.Keypair.fromSecret(privateKey);
+      const kp = DiamSdk.Keypair.fromSecret(privateKey);
       const publicKey = kp.publicKey();
       // return { publicKey, privateKey };
       setPublicKeyVal(publicKey);
